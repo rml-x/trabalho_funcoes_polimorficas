@@ -26,23 +26,36 @@ function pop(a) { // see: https://www.google.com/search?q=pop+operation
 }
 
 function next(a) { // open to interpretation
+    var util
     switch (typeof(a)) {
         case 'number':
             a = a + 1;
             break;
     
         case 'string':
-            a = "${a}a"
+            if (a[a.length - 1] === 'a') {
+                a = `${a}d`
+            }
+            if (a[a.length - 1] === 'd') {
+                a = `${a}t`
+            }
+            else { 
+                a = `${a}a`
+            }
             break;
-        /* case 'object':
-            if (Array.isArray(a)){
-            a = a.slice(0, -1);
+
+        case 'object':
+            if (Array.isArray(a)){         
+            for (let index = 0; index < a.length; index++) {
+                
+                
+            }
             }
             break;
         case 'boolean':
             a =! a
             break;
-        */
+    
     } 
     return a
 }

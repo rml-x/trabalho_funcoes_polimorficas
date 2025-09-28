@@ -26,15 +26,18 @@ console.log(pop(pop(pop(pop(pop(numero))))))
 console.log(pop(pop(pop(pop(pop(texto))))))
 
 console.log(pop(pop(pop(pop(pop(lista))))))
-/*
+
  
 
 console.log(next(numero))
 
 console.log(next(texto))
 
-console.log(next(lista))
 
+
+console.log(next(lista))
+console.log(lista)
+/*
 console.log(next(booleano))
 
  
