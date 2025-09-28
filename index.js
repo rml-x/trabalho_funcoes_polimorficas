@@ -1,4 +1,4 @@
-import {pop, next, middle, itera} from './org.js'
+import {pop, next, middle} from './org.js'
 
 var numero = 9
 
@@ -9,14 +9,10 @@ var lista = [2, 3, 8, 2, 4]
 var booleano = true
 
  
-try {
-    console.log(itera(lista))
-} 
-catch(exception) {
-    console.log("aconteceu um problema: " + exception)
-}
 
-/*
+console.log(pop(numero))
+
+
 console.log(pop(texto))
 
 console.log(pop(lista))
@@ -30,7 +26,7 @@ console.log(pop(pop(pop(pop(pop(numero))))))
 console.log(pop(pop(pop(pop(pop(texto))))))
 
 console.log(pop(pop(pop(pop(pop(lista))))))
-
+/*
  
 
 console.log(next(numero))
