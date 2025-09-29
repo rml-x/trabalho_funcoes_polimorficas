@@ -12,7 +12,6 @@ var booleano = true
 
 console.log(pop(numero))
 
-
 console.log(pop(texto))
 
 console.log(pop(lista))
@@ -33,11 +32,8 @@ console.log(next(numero))
 
 console.log(next(texto))
 
-
-
 console.log(next(lista))
-console.log(lista)
-/*
+
 console.log(next(booleano))
 
  
@@ -57,5 +53,5 @@ console.log(middle(texto))
 console.log(middle(lista))
 
 console.log(middle(booleano))
-*/
+
  

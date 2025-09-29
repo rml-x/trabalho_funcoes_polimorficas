@@ -1,69 +1,84 @@
 
 function pop(a) { // see: https://www.google.com/search?q=pop+operation
-    //if (typeof(a) != 'object') throw 'erro, tipo diferente de array'
     
+    let resposta;
     switch (typeof(a)) {
         case 'number':
-            a = a - 1;
+            resposta = a - 1;
             break;
-    
+
         case 'string':
-            a = a.slice(0,-1)
-            if(a === ''){
-            console.log("não há nada aqui agora")
+            resposta = a.slice(0,-1);
+            if(resposta === ''){
+                console.log("não há nada aqui agora")
             }
             break;
         case 'object':
             if (Array.isArray(a)){
-            a = a.slice(0, -1);
+                resposta = a.slice(0, -1);
             }
             break;
         case 'boolean':
-            a =! a
+            resposta = !a;
             break;
-    } 
-    return a
+    }
+    return resposta;
 }
 
 function next(a) { // open to interpretation
-    var util
+    
+    let resposta;
     switch (typeof(a)) {
         case 'number':
-            a = a + 1;
+            resposta = a + 1;
             break;
-    
+
         case 'string':
             if (a[a.length - 1] === 'a') {
-                a = `${a}d`
-            }
-            if (a[a.length - 1] === 'd') {
-                a = `${a}t`
-            }
-            else { 
-                a = `${a}a`
+                resposta = `${a}d`;
+            } else if (a[a.length - 1] === 'd') {
+                resposta = `${a}t`;
+            } else {
+                resposta = `${a}a`;
             }
             break;
 
         case 'object':
-            if (Array.isArray(a)){         
-            for (let index = 0; index < a.length; index++) {
-                
-                
-            }
+            if (Array.isArray(a)){
+                resposta = a.map(x => x * 2);
             }
             break;
         case 'boolean':
-            a =! a
+            resposta = !a;
             break;
-    
-    } 
-    return a
+    }
+    return resposta;
 }
 
  
-
 function middle(a) { // open to interpretation
-    return null
+
+    let resposta;
+    switch(typeof(a)){
+        case 'number':
+            resposta = a / 2;
+            break;
+
+        case 'string':
+            var index = Math.floor(a.length/2);
+            resposta = a[index];
+            break;
+
+        case 'object':
+            if (Array.isArray(a)){
+                resposta = a[Math.floor(a.length / 2)];
+            }
+            break;
+        case 'boolean':
+            resposta = !a;
+            break;
+    }
+    return resposta;
 }
 
 export {pop, next, middle}
